@@ -1,0 +1,130 @@
+.calculator {
+  &__title {
+    margin-bottom: 20px;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 50px;
+    letter-spacing: -0.05em;
+    text-align: center;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+    background-color: #fff;
+  }
+
+  &__info {
+    padding: 30px 0 30px 30px;
+    width: 100%;
+
+    &-title {
+      margin-bottom: 20px;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 30px;
+      letter-spacing: -0.05em;
+    }
+  }
+
+  &__description {
+    margin-bottom: 20px;
+
+    &-item {
+      display: flex;
+      align-items: center;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+
+    &-text {
+      width: 100%;
+      max-width: 300px;
+    }
+
+    &-icons {
+      svg {
+        width: 20px;
+        height: 20px;
+
+        &:not(:last-child) {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+
+  &__range {
+    margin-bottom: 20px;
+
+    &-title {
+      margin-bottom: 20px;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 30px;
+      letter-spacing: -0.05em;
+    }
+  }
+
+  &__total {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 20px 20px 0;
+    padding: 30px;
+    width: 100%;
+    max-width: 300px;
+    background-color: #33c5f3;
+    gap: 10px;
+
+    &-group {
+      font-size: 16px;
+      color: #fff;
+
+    }
+
+    &-name {
+      font-weight: 400;
+    }
+
+    &-value {
+      font-weight: 700;
+    }
+
+    &-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: auto;
+      border: 2px solid #fff;
+      border-radius: 10px;
+      padding: 0 20px;
+      height: 50px;
+      min-width: 110px;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 1;
+      text-align: center;
+      color: #fff;
+      background-color: #33c5f3;
+      transition: all .3s;
+      cursor: pointer;
+      user-select: none;
+
+      &:hover {
+        color: #33c5f3;
+        background-color: #fff;
+      }
+    }
+  }
+
+  &__form {
+    width: 100%;
+
+    input {
+      width: 100%;
+    }
+  }
+}
