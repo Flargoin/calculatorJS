@@ -5,7 +5,7 @@ const slider = (rangeSelector, rangeStart, rangeMin, rangeMax) => {
 
   noUiSlider.create(rangeSlider, {
     start: rangeStart,
-    connect: true,
+    connect: "upper",
     tooltips: true,
     step: 1,
     format: {
