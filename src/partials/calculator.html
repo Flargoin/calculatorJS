@@ -86,9 +86,11 @@
         <div class="calculator__range">
           <h3 class="calculator__range-title">Какое количество демонтируемых окон?</h3>
 
-          <form class="calculation__form" action="#">
-            <input type="range" class="form-range">
-          </form>
+          <div id="range-slider" class="calculator__range-slider"></div>
+          <div class="calculator__range-limit">
+            <span class="calculator__range-limit-item">1</span>
+            <span class="calculator__range-limit-item">10</span>
+          </div>
         </div>
 
         <div class="calculator__selects">
@@ -107,22 +109,22 @@
       <div class="calculator__total">
         <div class="calculator__total-group">
           <div class="calculator__total-name">Количество окон:</div>
-          <div class="calculator__total-value">3</div>
+          <div id="calculator__window-count" class="calculator__total-value">3</div>
         </div>
 
         <div class="calculator__total-group">
           <div class="calculator__total-name">Местоположение:</div>
-          <div class="calculator__total-value">Москва</div>
+          <div id="calculator__place" class="calculator__total-value">Москва</div>
         </div>
 
         <div class="calculator__total-group">
           <div class="calculator__total-name">Тип дома:</div>
-          <div class="calculator__total-value">Панельный/блочный дом</div>
+          <div id="calculator__house-type" class="calculator__total-value">Панельный/блочный дом</div>
         </div>
 
         <div class="calculator__total-group">
           <div class="calculator__total-name">Итого:</div>
-          <div class="calculator__total-value">4 345 ₽</div>
+          <div id="calculator__total-price" class="calculator__total-value">4 345 ₽</div>
         </div>
 
         <button class="calculator__total-btn">Да, это нормально</button>

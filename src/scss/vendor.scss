@@ -1,5 +1,7 @@
-@import "./vendor/normalize";
 @import url("https://fonts.cdnfonts.com/css/geometria");
+
+@import "./vendor/normalize";
+@import "../../node_modules/nouislider/dist/nouislider.min";
 
 // стили для модального окна
 // @import "../../node_modules/graph-modal/dist/graph-modal.min";
