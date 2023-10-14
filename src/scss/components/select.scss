@@ -76,4 +76,12 @@
       transform: rotate(180deg);
     }
   }
+
+  @include small-tablet {
+    max-width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
 }
