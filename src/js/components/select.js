@@ -3,6 +3,12 @@ const select = (selectHeader, selectItem, selectSelector, activeClass) => {
         selectItems = document.querySelectorAll(selectItem),
         elSelect = document.querySelectorAll(selectSelector);
 
+  // Элементы блока расчёта
+  const calcQuantity = document.querySelector("#calculator__window-count"),
+        calcPlace = document.querySelector("#calculator__place"),
+        calcHouseType = document.querySelector("#calculator__house-type"),
+        calcTotalPrice = document.querySelector("#calculator__total-price");
+
   /* Функции */
   // Удаление активного класса
   const selectClose = function () {
@@ -13,24 +19,33 @@ const select = (selectHeader, selectItem, selectSelector, activeClass) => {
 
   // Открытие-закрытие селекта
   const selectToggle = function () {
-    // При открытии второго и более селектов, предыдущие будут закрываться.
     selectClose();
-    this.parentElement.classList.toggle(activeClass);
+
+    if(!this.classList.contains(activeClass)) {
+      this.parentElement.classList.add(activeClass);
+    }
   };
 
   // Выбор option из селекта
   const selectChoose = function () {
     let text = this.textContent,
-        currentText = this.closest(".select").querySelector(".select__current");
+        currentText = this.closest(selectSelector).querySelector(".select__current");
         currentText.textContent = text;
-        selectClose();
+
+    if(this.closest("#calc-place-select")) {
+      calcPlace.textContent = text;
+    } else {
+      calcHouseType.textContent = text;
+    }
+
+    selectClose();
   };
 
 
   /* Обработчики */
   // Обработчик события клика на селект, для открытия и закрытия
-  selectTriggers.forEach(selectTrigger => {
-    selectTrigger.addEventListener("click", selectToggle);
+  selectTriggers.forEach(trigger => {
+    trigger.addEventListener("click", selectToggle);
   });
 
   // Обработчик выбора option
@@ -41,7 +56,7 @@ const select = (selectHeader, selectItem, selectSelector, activeClass) => {
   // Обработчик клика вне селекта
   window.addEventListener('click', event => {
     const target = event.target;
-    if (!target.closest(selectSelector) && !target.closest(selectHeader)) { // если этот элемент или его родительские элементы не окно навигации и не кнопка
+    if (!target.closest(selectSelector) && !target.closest(selectHeader)) {
       selectClose();
     }
   });
