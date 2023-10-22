@@ -94,7 +94,47 @@
         </div>
 
         <div class="calculator__selects">
-          @include('partials/select.html')
+          <div class="calculator__selects-group">
+            <div class="custom-select">
+              <button
+                class="select-button"
+                role="combobox"
+                aria-labelledby="select button"
+                aria-haspopup="listbox"
+                aria-expanded="false"
+                aria-controls="select-dropdown"
+              >
+                Москва
+                <div class="arrow">↓</div>
+              </button>
+              <ul role="listbox" id="select-dropdown-place" class="select-dropdown">
+                <li role="option">до 5км от МКАД</li>
+                <li role="option">до 10км от МКАД</li>
+                <li role="option">до 15км от МКАД</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="calculator__selects-group">
+            <div class="custom-select">
+              <button
+                class="select-button"
+                role="combobox"
+                aria-labelledby="select button"
+                aria-haspopup="listbox"
+                aria-expanded="false"
+                aria-controls="select-dropdown"
+              >
+                Москва
+                <div class="arrow">↓</div>
+              </button>
+              <ul role="listbox" id="select-dropdown-type" class="select-dropdown">
+                <li role="option">до 5км от МКАД</li>
+                <li role="option">до 10км от МКАД</li>
+                <li role="option">до 15км от МКАД</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
 

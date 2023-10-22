@@ -68,10 +68,6 @@
       svg {
         width: 20px;
         height: 20px;
-
-        &:not(:last-child) {
-          margin-right: 5px;
-        }
       }
     }
   }
@@ -206,6 +202,19 @@
 
       &:not(:last-child) {
         margin-right: 20px;
+      }
+    }
+
+    &-item {
+      position: relative;
+
+      &::after {
+        content: '↓';
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        pointer-events: none;
       }
     }
 
