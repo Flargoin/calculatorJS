@@ -32,6 +32,15 @@ h6 {
   padding: 0;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
 p {
   margin: 0;
   padding: 0;
@@ -49,6 +58,15 @@ a {
 
 .site-container {
   overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
+}
+
+// Тестовые стили
+.wrapper {
+  padding: 20px;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  gap: 30px;
 }
 
 .is-hidden {

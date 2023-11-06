@@ -1,0 +1,77 @@
+<!--
+Поздравляю ты добавил карточку,
+тебе нужно:
+1) отформатировать код карточки
+2) Добавить миксин в файле стилей @include po-card(params...)
+
+ВАЖНО!!!
+1) Если нужны теги "Эко продукт", "Мосбилд 2023" и тд... в card__head раскройте сниппет po-card-tags
+2) Если нужен стикер "Лучшая цена", "Хит продаж", "Самый теплый" и тд... в card желательно перед card__head раскройте сниппет po-card-sticker
+3) Если нужно название системы, в card__head раскройте сниппет po-card-name
+-->
+<div class="wrapper">
+  <div class="card">
+    <!-- po-card-sticker -->
+    <div class="card__head-sticker">Лучшая цена</div>
+
+    <div class="card__head">
+      <!-- po-card-name -->
+      <div class="card__head-name">Melke Art</div>
+      <!-- po-card-tags -->
+      <ul class="card__head-tags">
+        <li>
+          <a href="" class="card__head-tag-link">
+            <img class="card__head-tag" src="../img/svg/tag.svg" alt="" />
+          </a>
+        </li>
+      </ul>
+      <a class="card__head-link" href="">
+        <img class="card__head-img" src="../img/card/centum.jpg" alt="" />
+      </a>
+    </div>
+    <div class="card__body">
+      <h4 class="card__body-title">
+        <a class="card__body-link" href=""> от 12 790 ₽/м² </a>
+        <!-- Тут надо подумать над реализацией тайтла с ссылкой и без ссылки, пока думаю оставить чтобы мы корректировали лапками. -->
+      </h4>
+
+      <!-- Так же чертёж с ссылкой и без -->
+      <img class="card__body-draw" src="../img/svg/drawing.svg" alt="">
+
+      <p class="card__body-descr">
+        <!-- Тут не забыть сделать блок с характеристиками -->
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui vero sunt
+        error voluptates minima quod. In animi, iste est placeat nesciunt
+        consequuntur? Velit quis aperiam quidem labore optio, eius maiores?
+      </p>
+      <div class="card__footer">
+        <a href="" class="card__footer-link">Подробнее</a>
+        <a href="" class="card__footer-btn">Заказать</a>
+      </div>
+    </div>
+  </div>
+
+  <!--
+  Поздравляю ты добавил карточку,
+  тебе нужно:
+  1) отформатировать код карточки
+  2) Добавить миксин в файле стилей @include po-card(params...)
+  -->
+  <div class="card">
+    <div class="card__head">
+      <a class="card__head-link" href="">
+        <img class="card__head-img" src="../img/card/centum.jpg" alt="" />
+      </a>
+    </div>
+    <div class="card__body">
+      <h4 class="card__body-title">
+        <a class="card__body-link" href=""> от 12 790 ₽/м² </a>
+      </h4>
+      <p class="card__body-descr">Описание карточки</p>
+      <div class="card__footer">
+        <a href="" class="card__footer-link">Подробнее</a>
+        <a href="" class="card__footer-btn">Заказать</a>
+      </div>
+    </div>
+  </div>
+</div>
