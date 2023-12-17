@@ -1,29 +1,38 @@
 const select = (selector) => {
-  const selectEl = document.querySelectorAll(selector),
-        selectOptionPlace = document.querySelectorAll("#select-dropdown-place li"),
-        selectOptionType = document.querySelectorAll("#select-dropdown-type li"),
-        selectCurrentValue = document.querySelectorAll(".select-button");
+  const customSelect = document.querySelector(selector);
+  const selectBtn = document.querySelector(".select-button");
+  const selectedValue = document.querySelector(".selected-value");
+  const optionsList = document.querySelectorAll(".select-dropdown li");
 
-  console.log(selectCurrentValue);
-
-  selectEl.forEach(item => {
-    item.addEventListener("click", () => {
-      item.classList.toggle("is-active");
-    });
+  // add a click event to select button
+  selectBtn.addEventListener("click", () => {
+    // add/remove active class on the container element
+    customSelect.classList.toggle("active");
+    // update the aria-expanded attribute based on the current state
+    selectBtn.setAttribute(
+      "aria-expanded",
+      selectBtn.getAttribute("aria-expanded") === "true" ? "false" : "true"
+    );
   });
 
-  selectOptionPlace.forEach(option => {
-    option.addEventListener("click", (event) => {
-      selectCurrentValue.textContent = event.target.textContent;
-    });
-  });
 
-  selectOptionType.forEach(option => {
-    option.addEventListener("click", (event) => {
-      selectCurrentValue.textContent = event.target.textContent;
-    });
-  });
+  optionsList.forEach((option) => {
+    function handler(e) {
+      // Click Events
+      if (e.type === "click" && e.clientX !== 0 && e.clientY !== 0) {
+        selectedValue.textContent = this.children[1].textContent;
+        customSelect.classList.remove("active");
+      }
+      // Key Events
+      if (e.key === "Enter") {
+        selectedValue.textContent = this.textContent;
+        customSelect.classList.remove("active");
+      }
+    }
 
+    option.addEventListener("keyup", handler);
+    option.addEventListener("click", handler);
+  });
 }
 
 export default select;

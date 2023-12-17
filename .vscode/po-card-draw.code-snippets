@@ -1,0 +1,10 @@
+{
+	"po-card-drawing": {
+		"scope": "html, php",
+		"prefix": "po-card-draw",
+		"body": [
+			"<img class=\"card__body-draw\" src=\"../img/svg/drawing.svg\" alt=\"\">",
+		],
+		"description": "Log output to console"
+	}
+}

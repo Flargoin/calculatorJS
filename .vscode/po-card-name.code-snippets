@@ -1,0 +1,10 @@
+{
+	"card-name": {
+		"scope": "html, php",
+		"prefix": "po-card-name",
+		"body": [
+			"<div class=\"card__head-name\">Melke Art</div>",
+		],
+		"description": "Log output to console"
+	}
+}

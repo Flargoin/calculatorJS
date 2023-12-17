@@ -3,11 +3,13 @@
 @import "mixins";
 @import "fonts";
 @import "settings";
+@import "animations";
 
 // подключения компонентов страницы
-@import "./components/header";
-@import "./components/calculator";
-@import "./components/select";
+/* @import "./components/header";
+@import "./components/calculator";*/
+// @import "./components/select";
+@import "./components/tabs";
 
 //Компоненты ПО
 @import "./components/card";

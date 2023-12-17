@@ -1,0 +1,34 @@
+{
+	"select": {
+		"scope": "html, php",
+		"prefix": "po-select",
+		"body": [
+			"<div class=\"custom-select\">",
+			"<button",
+			"class=\"select-button\"",
+			"role=\"combobox\"",
+			"aria-labelledby=\"select button\"",
+			"aria-haspopup=\"listbox\"",
+			"aria-expanded=\"false\"",
+			"aria-controls=\"select-dropdown\"",
+			"aria-disabled=\"false\"".
+			">",
+		
+			  "<span class=\"selected-value\">Одностороняя внешняя</span>",
+			  "<span class=\"arrow\">↓</span>",
+			"</button>",
+			"<ul role=\"listbox\" class=\"select-dropdown\">",
+			  "<li role=\"option\">",
+				"<input type=\"radio\" id=\"github\" name=\"social-account\" />",
+				"<label for=\"github\">Одностороняя внешняя</label>",
+			  "</li>",
+			  "<li role=\"option\">",
+				"<input type=\"radio\" id=\"instagram\" name=\"social-account\" />",
+				"<label for=\"instagram\">Двухстороняя</label>",
+			  "</li>",
+			"</ul>",
+		  "</div>",
+		],
+		"description": "Log output to console"
+	}
+}

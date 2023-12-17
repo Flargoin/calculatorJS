@@ -1,22 +1,27 @@
-<div class="calculator__selects-group">
-  <div class="label">
-    Место положения вашего дома
-  </div>
-  <div id="calc-place-select" class="select">
-    <div class="select__header">
-      <div class="select__current">Москва</div>
-      <div class="select__icon">
-        <svg class="">
-          <use xlink:href="img/sprite.svg#arrow-down"></use>
-        </svg>
-      </div>
-    </div>
+<div class="container">
+  <div class="custom-select">
+    <button
+    class="select-button"
+    role="combobox"
+    aria-labelledby="select button"
+    aria-haspopup="listbox"
+    aria-expanded="false"
+    aria-controls="select-dropdown"
+    aria-disabled="false"
+    >
 
-    <div class="select__body">
-      <div class="select__item">Москва</div>
-      <div class="select__item">до 5км от МКАД</div>
-      <div class="select__item">до 10км от МКАД</div>
-      <div class="select__item">до 15км от МКАД</div>
-    </div>
+      <span class="selected-value">Одностороняя внешняя</span>
+      <span class="arrow">↓</span>
+    </button>
+    <ul role="listbox" class="select-dropdown">
+      <li role="option">
+        <input type="radio" id="github" name="social-account" />
+        <label for="github">Одностороняя внешняя</label>
+      </li>
+      <li role="option">
+        <input type="radio" id="instagram" name="social-account" />
+        <label for="instagram">Двухстороняя</label>
+      </li>
+    </ul>
   </div>
 </div>

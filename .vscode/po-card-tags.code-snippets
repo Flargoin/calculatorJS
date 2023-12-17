@@ -1,0 +1,16 @@
+{
+	"tags": {
+		"scope": "html, php",
+		"prefix": "po-card-tags",
+		"body": [
+			"<ul class=\"card__head-tags\">",
+			"<li>",
+			"<a href="" class=\"card__head-tag-link\">",
+			"<img class=\"card__head-tag\" src=\"../img/svg/tag.svg\" alt=\"\" />",
+			"</a>",
+			"</li>",
+			"</ul>",
+		],
+		"description": "Теги для карточки"
+	}
+}

@@ -1,0 +1,31 @@
+{
+	"card": {
+		"scope": "html, php",
+		"prefix": "po-card",
+		"body": [
+			"<div class=\"card\">",
+
+				"<div class=\"card__head\">",
+					"<a class=\"card__head-link\" href=\"\">",
+						"<img class=\"card__head-img\" src=\"../img/card/centum.jpg\" alt=\"\">",
+					"</a>",
+				"</div>",
+
+				"<div class=\"card__body\">",
+					"<h4 class=\"card__body-title\">",
+					"<a class=\"card__body-link\" href=\"\"> от 12 790 ₽/м² </a>",
+					"</h4>",
+
+					"<p class=\"card__body-descr\">Описание карточки</p>",
+
+					"<div class=\"card__footer\">",
+						"<a href=\"\" class=\"card__footer-link\">Подробнее</a>",
+						"<a href=\"\" class=\"card__footer-btn\">Заказать</a>",
+					"</div>",
+				"</div>",
+			"</div>",
+			"$2"
+		],
+		"description": "Сниппет карточки для ПО"
+	}
+}

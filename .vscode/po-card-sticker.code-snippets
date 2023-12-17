@@ -1,0 +1,10 @@
+{
+	"sticker": {
+		"scope": "html",
+		"prefix": "po-card-sticker",
+		"body": [
+			"<div class=\"card__head-sticker\">Лучшая цена</div>",
+		],
+		"description": "Стикер для карточки"
+	}
+}
